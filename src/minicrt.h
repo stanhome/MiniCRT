@@ -19,7 +19,7 @@ extern "C" {
 void free(void *ptr);
 void *malloc(unsigned size);
 static int brk(void *end_data_segment);
-int mini_crt_init_heap();
+int mini_crt_heap_init();
 
 
 //string stuff
@@ -43,7 +43,7 @@ typedef int FILE;
 #define stderr  ((FILE *)2)
 #endif
 
-int mini_crt_init_io();
+int mini_crt_io_init();
 FILE *fopen(const char *filename, const char *mode);
 int fread(void *buffer, int szie, int count, FILE *stream);
 int fwrite(const void *buffer, int size, int count, FILE *stream);

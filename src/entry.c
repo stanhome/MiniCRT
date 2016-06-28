@@ -62,7 +62,7 @@ void mini_crt_entry(void)
     if (!mini_crt_heap_init())
         crt_fatal_error("heap initialize failed");
 
-    if (!mini_crt_to_init())
+    if (!mini_crt_io_init())
         crt_fatal_error("IO initialize failed");
 
     ret = main(argc, argv);
